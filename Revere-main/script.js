@@ -9,17 +9,17 @@ let recordAudio = false;
 
 fetch('http://127.0.0.1:5000/changeSettings/InputLanguage', {
     method: 'POST',
-    headers: {
+    headers: {  
         'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ model_type: "en" }),
+    body: JSON.stringify({ input_language: "en" }),
 });
 fetch('http://127.0.0.1:5000/changeSettings/OutputLanguage', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ model_type: "en" }),
+    body: JSON.stringify({ output_language: "en" }),
 });
 fetch('http://127.0.0.1:5000/changeSettings/VoiceModel', {
     method: 'POST',
@@ -105,6 +105,8 @@ function translateText() {
 }
 function clearTexts() {
     fetch('http://127.0.0.1:5000/clearTexts');
+    document.getElementById('liveText').textContent = "";
+    document.getElementById('translationText').textContent = "";
 }
 
 function toggleDarkMode() {
@@ -130,7 +132,7 @@ function toggleRecording() {
 function startRecording() {
     fetch('http://127.0.0.1:5000/startSpeechThreaded')
         .then(() => {
-            console.log('Recording started');
+            document.getElementById('recordButton').textContent = "Start Talking!";
         });
 }
 function stopRecording() {
