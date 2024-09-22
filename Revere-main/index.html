@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revere</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode">
+  <header>
+    <div class="logo">Revere</div>
+    <div class="settings-menu">
+      <button class="settings-icon" onclick="toggleSettings()">⚙️</button>
+      <div id="settings" class="settings-popup">
+        <div class="settings-section">
+          <h3>Input Language</h3>
+          <select id="languageInputSelect" onchange="changeInputLanguage()">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="pt">Portuguese</option>
+            <option value="zh-CN">Mandarin</option>
+            <option value="ru">Russian</option>
+            <option value="sw">Swahili</option>
+          </select>
+        </div>
+        <div class="settings-section">
+          <h3>Output Language</h3>
+          <select id="languageOutputSelect" onchange="changeOutputLanguage()">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="pt">Portuguese</option>
+            <option value="zh-CN">Mandarin</option>
+            <option value="ru">Russian</option>
+            <option value="sw">Swahili</option>
+          </select>
+        </div>
+        <div class="settings-section">
+          <h3>Text</h3>
+          <select id="fontSelect" onchange="changeFont()">
+            <option value="Georgia">Georgia</option>
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier">Courier</option>
+            <option value="Calibri">Calibri</option>
+          </select>
+          <select id="fontSizeSelect" onchange="changeFontSize()">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="x-large">Extra Large</option>
+            <option value="xx-large">XX Large</option>
+          </select>
+        </div>
+        <div class="settings-section">
+          <h3>Voices</h3>
+          <select id="voiceSelect" onchange="changeVoice()">
+            <option value="alloy">Default</option>
+            <option value="echo">Default Male</option>
+            <option value="shimmer">Default Female</option>
+            <option value="onyx">Deep Male</option>
+          </select>
+        </div>
+        <div class="settings-section">
+          <h3>Display Mode</h3>
+          <label class="switch">
+            <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="live-transcription">
+      <h2>Live Transcription</h2>
+      <div id="liveText"></div>
+    </div>
+    <div class="translation">
+      <h2>Translated Text</h2>
+      <div id="translationText"></div>
+    </div>
+  </div>
+
+  <button id="recordButton" onclick="toggleRecording()">Start/Stop Recording</button>
+  <button id="translateButton" onclick="translateText()">Translate Text</button>
+  <button id="speakButton" onclick="speakUntranslatedText()">Speak Left Side</button>
+  <button id="speakButton" onclick="speakTranslatedText()">Speak Right Side</button>
+  <button id="clearTexts" onclick="clearTexts()">Clear Texts</button>
+
+  <div id="definitionPopup" class="definition-popup">
+    <div class="definition-content">
+        <span id="definitionText"></span>
+        <button onclick="closeDefinition()">Close</button>
+    </div>
+</div>
+  <div id="definitionPopup" class="definition-popup">
+    <div class="definition-content">
+      <span id="definitionText"></span>
+      <button onclick="closeDefinition()">Close</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
