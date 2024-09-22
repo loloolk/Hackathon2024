@@ -1,10 +1,20 @@
 import flask
 from flask import request, jsonify
+from flask_cors import CORS
 
 from python.stt import getSpeech, getSpeechThreaded
 from python.tts import speakText, translateText
 
+import speech_recognition
+
 app = flask.Flask(__name__)
+CORS(app)
+
+headers = {
+    'Content-Type': 'application/json',
+    'Accept-Charset': 'UTF-8',
+    "Access-Control-Allow-Origin": "*",
+}
 
 class Vars:
     languages = {
@@ -41,10 +51,11 @@ class Vars:
 
 def callback(recognizer, audio):
     try:
-        Vars.prev_recorded_text += recognizer.recognize_google(audio, language=Vars.input_language)
-    except speech_recognition.UnknownValueError:
+        Vars.prev_recorded_text += recognizer.recognize_google(audio, language=Vars.input_language) + ' '
+        print(Vars.prev_recorded_text)
+    except speech_recognition.exceptions.UnknownValueError:
         print("[!] UnknownValueError")
-    except speech_recognition.RequestError as e:
+    except speech_recognition.exceptions.RequestError as e:
         print("RequestError: ", e)
 
 
@@ -97,11 +108,6 @@ def changeOutputLanguage():
     except ValueError:
         response["error"] = "Invalid output language, options are: " + str(Vars.languages.keys())
     return jsonify(response)
-
-# $.post("127.0.0.1:5000/changeSettings/OutputLanguage", {
-    # json_string: JSON.stringify({output_language: "es"})
-# }
-
 @app.route('/changeSettings/VoiceModel', methods=['POST'])
 def changeVoiceModel():
     response = {}
