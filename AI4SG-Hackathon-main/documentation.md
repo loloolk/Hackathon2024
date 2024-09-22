@@ -39,9 +39,22 @@
 - **How Applied**: Detail the methods or processes through which the AI tool was utilized.
 - **Rationale**: Explain why each tool was selected for its specific application.
 
+#### 2.2.1 ChatGPT and Claude
+- **When Applied**: During the Ideation and Development phases.
+- **How Applied**: Used ChatGPT and Claude to identify problems with out ideas for the project and to assist with the front-end development.
+- **Rationale**: We used ChatGPT and Claude to help us brainstorm ideas for the project and to assist with the front-end development. These tools provided valuable insights and suggestions that helped us refine our ideas and improve the user experience of our platform.
+  
+#### 2.2.2 Github Copilot
+- **When Applied**: During the Development phase.
+- **How Applied**: Used Github Copilot to assist with code completion and increase the efficiency of the development process.
+- **Rationale**: We used Github Copilot to help us complete the user's code by providing suggestions and autocompletion. This tool helped us write code faster and more accurately, saving us time and effort during the development process.
+  
+#### 2.2.3 openai
+- **When Applied**: During the Execution phase.
+- **How Applied**: Used openai to provide the text-to-speech functionality to read out the translated text.
+- **Rationale**: We used openai to provide the text-to-speech functionality to read out the translated text. This feature enhances the user experience of our platform and makes educational content more accessible to students with hearing impairments or other disabilities.
+
 ### 2.3 Total use of AI Tools
-- **Participan 1-- %usage**: Detail the percentage of AI tool usage by the participant across different project phases, such as brainstorming, development, documentation, and testing. Specify which tools were used most frequently.
-- **Participan 2-- %usage**: Detail the percentage of AI tool usage by the participant across different project phases, such as brainstorming, development, documentation, and testing. Specify which tools were used most frequently.
-- **Participan 3-- %usage**: Detail the percentage of AI tool usage by the participant across different project phases, such as brainstorming, development, documentation, and testing. Specify which tools were used most frequently.
-- **Participan 4-- %usage**: Detail the percentage of AI tool usage by the participant across different project phases, such as brainstorming, development, documentation, and testing. Specify which tools were used most frequently.
-- **Participan 5-- %usage**: Detail the percentage of AI tool usage by the participant across different project phases, such as brainstorming, development, documentation, and testing. Specify which tools were used most frequently.
+- **Kithe-- 30%**: Used ChatGPT for ideation and assistance with back-end development.
+- **Brendan-- 45%**: Used ChatGPT, Claude and Gemini for ideation and assistance with front-end development.
+- **Marc-- 10%**: Momentarily used Github Copilot for some code completion.
