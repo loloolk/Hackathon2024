@@ -17,7 +17,7 @@ def speakText(command, voice):
     
     os.remove("output.mp3")
     
-def translateText(text, output_language):
-    translated = GoogleTranslator(source='en', target=output_language).translate(text=text)
+def translateText(text, input_language, output_language):
+    translated = GoogleTranslator(source=input_language, target=output_language).translate(text=text)
     return translated
 
