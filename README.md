@@ -20,5 +20,5 @@ NOTE: The reason all the commits were made by one person is because we used VSCo
 - /AI4SG-Hackathon-main: General Info on the project
 - /Revere-main: GUI Website for the project
 - /python: Python files for the project
- -API.py: The API for the project, make sure this is running before using the website
+- API.py: The API for the project, make sure this is running before using the website
 - main.py: The CLI Interface for the project
