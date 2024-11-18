@@ -1,5 +1,7 @@
 ## AI for Social Good Hackathon 2024
 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 ### Team Revere
 
 #### Members:
@@ -22,3 +24,6 @@ NOTE: The reason all the commits were made by one person is because we used VSCo
 - /python: Python files for the project
 - API.py: The API for the project, make sure this is running before using the website
 - main.py: The CLI Interface for the project
+
+## License
+This project is licensed under the [MIT License](LICENSE).
